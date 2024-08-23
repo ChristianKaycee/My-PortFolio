@@ -30,21 +30,21 @@
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="with-me-two sm">
+                <div onclick="location.href ='mailto:davinateee@gmail.com'" class="with-me-two sm">
                     <p>Work With Me</p>
-                    <button onclick="location.href='#'" class="btn orange"><img
+                    <button class="btn orange hov"><img
                             src="./img/arrow-circle-up-svgrepo-com.svg" alt="Message me"></button>
                 </div>
             </nav>
-            <div class="with-me">
+            <div class="with-me" onclick="location.href ='mailto:davinateee@gmail.com'">
                 <p>Work With Me</p>
-                <button onclick="location.href='#'" class="btn orange"><img src="./img/arrow-circle-up-svgrepo-com.svg"
+                <button class="btn orange hov"><img src="./img/arrow-circle-up-svgrepo-com.svg"
                         alt="Message me"></button>
             </div>
         </div>
     </header>
     <div class="margin"></div>
-    <div id="home">
+    <div id="home" style="display: block;">
         <section class="showcase">
             <div class="container">
                 <div class="introduct">
@@ -77,10 +77,10 @@
                 <p class="aboutPort">
                     A passionate front-end Web developer from Rivers, Nigeria
                 </p>
-                <div class="my-port">
+                <div class="my-port  proj">
                     <div class="port-me">
                         <p>My Portfolio</p>
-                        <button onclick="location.href='#'" class="btn white"><img
+                        <button class="btn white hov"><img
                                 src="./img/arrow-circle-up-svgrepo-com.svg" alt="My Portfolio"></button>
                     </div>
                     <p class="arrow">&rightarrow;</p>
@@ -121,8 +121,20 @@
                 </div>
             </div>
             <div class="buttons">
-                <button class="resume" onclick="href='./img/icons8-linkedin-circled.gif.mp4'" download>Resume</button>
-                <button class="portfolio" onclick=" href ='#projects'">Portfolio</button>
+                <button class="resume">Resume</button>
+                <div class="download">
+                    <div class="dwn-head">
+                        <img src="./img/favicon.png" alt="logo" class="logo">
+                        <img src="./img/icons8-close.svg" alt="close" class="close-dwn">
+                    </div>
+                    <p class="download-ask">Do you want to download this file?</p>
+                    <div class="answer">
+                        <button><a href="./img/My Resume.pdf" class="vew" target="_blank">Just View</a></button>
+                        <button><a class="no">No</a></button>
+                    <button><a href="./img/My Resume.pdf" class="yes" download ="KingShow Resume.pdf">Yes</a></button>
+                    </div>
+                </div>
+                <button class="portfolio proj">Portfolio</button>
             </div>
             <div class="my-age">
                 <table>
@@ -422,12 +434,12 @@
                     <p class="pronouns">(He / Him)</p>
                 </div>
                 <p class="position"><code>Web Developer</code></p>
-                <button class="email" onclick="href ='mailto:davinateee@gmail.com'">Email me</button>
+                <button class="email" onclick="location.href ='mailto:davinateee@gmail.com'">Email me</button>
                 <div class="socials">
-                    <img src="./img/icons8-instagram.svg" alt="icons8-instagram">
-                    <img src="./img/icons8-facebook.svg" alt="icons8-facebook">
-                    <img src="./img/icons8-github.svg" alt="icons8-github">
-                    <video src="./img/icons8-linkedin-circled.gif.mp4" alt="icons8-linkedin-circled">
+                    <a href="https://www.instagram.com/kingshowplays/"><img src="./img/icons8-instagram.svg" alt="icons8-instagram"></a>
+                    <a href="https://m.facebook.com/kayceee.christian//"><img src="./img/icons8-facebook.svg" alt="icons8-facebook"></a>
+                    <a href="https://github.com/ChristianKaycee/"><img src="./img/icons8-github.svg" alt="icons8-github"></a>
+                    <a href="https://wa.me/message/75AQBKS6MMUHH1/"><video src="./img/icons8-linkedin-circled.gif.mp4" alt="icons8-linkedin-circled"></a>
                 </div>
             </div>
         </div>
