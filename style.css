@@ -42,6 +42,13 @@ img {
 }
 
 /* global */
+.hov,.with-me,.proj,.sm{
+    transition: .3s;
+    cursor: pointer;
+}
+:is(.hov,.with-me,.proj,.sm):hover{
+    transform: scale(1.05);
+}
 .margin {
     margin-bottom: 6rem;
 }
@@ -127,6 +134,7 @@ img {
 }
 
 .head .container .with-me {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -365,6 +373,7 @@ img {
 }
 
 .about-me .buttons {
+    position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
@@ -372,7 +381,62 @@ img {
     align-items: center;
     gap: 10px;
 }
-
+.download{
+    position: absolute;
+    background-color: var(--white);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    display: none;
+    transition:opacity 3s;
+}
+.show_dwn{
+    display: flex;
+    opacity: 1;
+}
+.dwn-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.close-dwn,.logo{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.download-ask{
+    font-weight: 800;
+}
+.answer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.answer button{
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+.answer button a{
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--white);
+    text-decoration: none;
+    width: 100%;
+}
 .bios>div {
     margin-bottom: 1em;
 }
@@ -380,7 +444,6 @@ img {
 .bios>div ul li {
     font-size: 1.3em;
 }
-
 .resume,
 .portfolio {
     padding: 15px 10px;
@@ -391,6 +454,10 @@ img {
     color: var(--white);
     background-color: var(--Footer);
     cursor: pointer;
+    transition: .3s;
+}
+:is(.resume,.portfolio):hover{
+    transform: scale(1.1);
 }
 
 .my-age table {
@@ -500,15 +567,17 @@ img {
     flex-direction: column;
     gap: 1em;
     margin: auto;
-    background-color: var(--Bg);
+    background-color: var(--white);
     height: 450px;
     padding: 10px;
     border-radius: 10px;
-    border-top: 5px solid var(--Orange);
+    border-top: 7px solid var(--black);
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
     align-items: center;
 }
-
+.project-item:nth-child(even){
+    border-top-color:var(--Orange);
+}
 .project-info {
     display: flex;
     flex-direction: column;
@@ -539,7 +608,7 @@ img {
     transition: .3s;
 }
 
-.project-image img:hover {
+.zoom{
     transform: scale(1.2);
 }
 
@@ -859,7 +928,7 @@ footer {
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:770px) {
 
     /* head */
     .head .container .name {
@@ -1029,6 +1098,7 @@ footer {
         gap: 10px;
         padding: 10px 5px;
         font-size: 2em;
+        cursor: pointer;
     }
 
     /* showcase */
