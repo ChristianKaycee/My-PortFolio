@@ -130,15 +130,9 @@ function scrollVisible() {
 }
 function circleLoad() {
     let screenHeight = window.scrollY;
-    console.log("screen", screenHeight);
     let docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    console.log("scrollheight",document.documentElement.scrollHeight);
-    console.log("docheight",docHeight);
-    console.log("windowInner",window.innerHeight);
     let currentHeight = screenHeight / docHeight;
-    console.log("current",currentHeight);
     let loadHeight = currentHeight * 360;
-    console.log("load",loadHeight);
     upbtn.style.background = `conic-gradient(rgb(19, 177, 239) ${loadHeight}deg, transparent ${loadHeight}deg)`;
 }
 
@@ -152,3 +146,65 @@ goup.addEventListener("click", () => {
         behavior: "smooth" // Optional, for smooth scrolling effect
     });
 });
+
+//for resume
+let resumebtn = document.querySelector(".resume");
+let downloadBox = document.querySelector(".download");
+let closedownload = document.querySelector(".close-dwn");
+let dwnButtons = document.querySelectorAll(".answer button a");
+resumebtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    downloadBox.classList.add("show_dwn");
+});
+closedownload.addEventListener("click",()=>{
+    downloadBox.classList.remove("show_dwn");
+});
+dwnButtons.forEach(btn =>{
+    btn.addEventListener("click",()=>{
+        downloadBox.classList.remove("show_dwn");
+    });
+});
+
+//To Portfolio
+let projectBtn = document.querySelectorAll(".proj");
+let projects = document.getElementById("projects");
+projectBtn.forEach(proj =>{
+    proj.addEventListener("click",()=>{
+        const homeSection = document.getElementById("home");
+            if (homeSection && homeSection.style.display === "block" && menu.checked === true){
+                ul.classList.toggle("show");
+                sideBar.classList.toggle("width");
+                menu.checked = false;
+                homeSection.style.display = "none";
+                projects.style.display ="block";
+            }
+            if (homeSection && homeSection.style.display === "block"){
+                homeSection.style.display = "none";
+                projects.style.display ="block";
+            }
+        const aboutSection = document.getElementById("about");
+            if (aboutSection && aboutSection.style.display === "block" && menu.checked === true){
+                ul.classList.toggle("show");
+                sideBar.classList.toggle("width");
+                menu.checked = false;
+                aboutSection.style.display = "none";
+                projects.style.display ="block";
+            }
+            if (aboutSection && aboutSection.style.display === "block"){
+                aboutSection.style.display = "none";
+                projects.style.display ="block";
+            }
+    });
+});
+
+//project image
+let myProjects = document.querySelector(".my-projects");
+let projectImageBox = myProjects.querySelectorAll(".project-item");
+
+projectImageBox.forEach(projBox => {
+  projBox.addEventListener("click", () => {
+    let projectImages = projBox.querySelector(".project-image a img");
+    projectImages.classList.toggle("zoom");
+    });
+  });
+
