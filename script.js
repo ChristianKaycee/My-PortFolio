@@ -85,6 +85,9 @@ if (pageName === 'index.html') {
     closeDonorPage.addEventListener("click",()=>{
         donorPage.classList.remove("show");
     })
+    donateBtn.addEventListener("click",(e)=>{
+        e.preventDefault();
+    })
     function makePayment() {
     let user_num = number.value;
     let user_name = document.getElementById("user_name").value; // Added to ensure `user_name` is defined
