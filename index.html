@@ -110,17 +110,17 @@
                 </div>
                 <div class="form-box">
                     <label for="user_email">Email :</label>
-                    <input type="email" required id="user_email" placeholder="Your email">
+                    <input type="text" required id="user_email" placeholder="Your email">
                 </div>
                 <div class="form-box">
                     <label for="user_num">Number :</label>
-                    <input type="number" required id="user_num" placeholder="Your number">
+                    <input type="text" required id="user_num" placeholder="Your number">
                 </div>
                 <div class="form-box">
                     <label for="amount">Donate :</label>
                     <input type="number" required step="1000" id="amount" placeholder="Amount in Naira">
                 </div>
-                <button type="submit" id ="don_btn" onclick="makePayment()"><img src="./img/coffeebtn.jpg" alt="coffee button"></button>
+                <button type="submit" id ="don_btn"><img src="./img/coffeebtn.jpg" alt="coffee button" onclick="makePayment()"></button>
             </form>
         </div>
     <div id="testimonials" hidden>
