@@ -79,10 +79,6 @@ if (pageName === 'index.html') {
     let amount = document.getElementById("amount");
     let email = document.getElementById("user_email");
     let number = document.getElementById("user_num");
-    let user_num = number.value;
-    let user_name = name.value;
-    let user_email = email.value;
-    let amt = amount.value;
     openDonorPage.addEventListener("click",()=>{
         donorPage.classList.add("show");
     })
@@ -90,6 +86,15 @@ if (pageName === 'index.html') {
         donorPage.classList.remove("show");
     })
     function makePayment() {
+    let user_num = number.value;
+    let user_name = document.getElementById("user_name").value; // Added to ensure `user_name` is defined
+    let user_email = email.value;
+    let amt = amount.value;
+
+    if (!user_email || !user_num || !user_name || !amt) {
+        alert("Please fill in all required fields.");
+        return;
+    }
         FlutterwaveCheckout({
           public_key: "FLWPUBK_TEST-2a3aac1cee87f8bdb0b0f8d8997b0def-X",
           tx_ref: "KINGSHOW-DI0NzMx53",
