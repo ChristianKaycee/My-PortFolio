@@ -93,7 +93,7 @@ if (pageName === 'index.html') {
         FlutterwaveCheckout({
           public_key: "FLWPUBK_TEST-2a3aac1cee87f8bdb0b0f8d8997b0def-X",
           tx_ref: "KINGSHOW-DI0NzMx53",
-          amount: amt,
+          amount: "5000",
           currency: "NGN",
           payment_options: "banktransfer,card, ussd",
           meta: {
