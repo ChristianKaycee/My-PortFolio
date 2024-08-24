@@ -102,14 +102,13 @@ if (pageName === 'index.html') {
     return prefix + randomPart;
 }
 
-
-console.log(transactionID);
     function makePayment() {
     let user_num = number.value;
     let user_name = document.getElementById("user_name").value; // Added to ensure `user_name` is defined
     let user_email = email.value;
     let amt = amount.value;
     const transactionID = generateTransactionID();
+    console.log(transactionID);
     if (!user_email || !user_num || !user_name || !amt) {
         alert("Please fill in all required fields.");
         return;
