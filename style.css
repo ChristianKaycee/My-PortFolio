@@ -400,7 +400,7 @@ img {
     gap: .5em;
     justify-content: center;
     z-index: 100;
-    background-color: var(--Bg);
+    background-color: var(--white);
     height: 80%;
     width: 340px;
     top: 50%;
@@ -409,10 +409,15 @@ img {
     padding:20px;
     border-radius: 20px;
     transition: .3s;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events:none;
 }
 .donate-form.show{
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events:auto;
+    transition:.3s;
     transform: translate(-50%,-50%);
 }
 #close_don{
