@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <title>My Portfolio</title>
+    <title>Portfolio | Home</title>
 </head>
 
 <body>
@@ -24,11 +24,10 @@
             </div>
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">My Projects</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="currentNav"><a href="#home">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./projects.html">My Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
                 <div onclick="location.href ='mailto:davinateee@gmail.com'" class="with-me-two sm">
                     <p>Work With Me</p>
@@ -44,7 +43,6 @@
         </div>
     </header>
     <div class="margin"></div>
-    <div id="home" style="display: block;">
         <section class="showcase">
             <div class="container">
                 <div class="introduct">
@@ -77,7 +75,7 @@
                 <p class="aboutPort">
                     A passionate front-end Web developer from Rivers, Nigeria
                 </p>
-                <div class="my-port  proj">
+                <div class="my-port" onclick="location.href='./projects.html'">
                     <div class="port-me">
                         <p>My Portfolio</p>
                         <button class="btn white hov"><img
@@ -87,258 +85,45 @@
                 </div>
             </div>
         </section>
-    </div>
-    <div id="about" style="display: none;">
-        <div class="about-me">
-            <div class="about-head">
-                <h1>About Me</h1>
-                <code>All you wanna know</code>
-            </div>
-            <p>Ermm... My name is <q><i><b>Kingdavid Christian</b></i></q>. I'm a front-end website developer.</p>
-            <div class="bios">
-                <div class="infoBox">
-                    <p class="hobby">Hobbies [ In my free time ]</p>
-                    <ul class="about-bio">
-                        <li>Coding</li>
-                        <li>Watching anime</li>
-                        <li>Playing games [ with friends tho ] playing by yourself doesn't seem fun.</li>
-                    </ul>
-
+        <div class="combo">
+            <section id ="quote-box">
+                <div class="container">
+                    <p id="quote"></p>
+                    <p id="author"></p>
                 </div>
-                <div class="infoBox">
-                    <p class="school">Education [ Schools Attended ]</p>
-                    <ul class="school-bio">
-                        <li>Redeemers International Secondary School, <br> [ 2016-2022 ]</li>
-                        <li>University of Port-Harcourt, <br> [ 2022 - Till date ]</li>
-                    </ul>
+            </section>
+            <section id ="donate">
+                <div class="container">
+                    <img src="./img/coffee.jpg" alt="coffee">
+                    <p class="give-me">Click me to donate &ssmile;</p>
                 </div>
-                <div class="infoBox">
-                    <p class="award">Awards Received</p>
-                    <ul class="award-bio">
-                        <li>Received an award of best in Data Processing <br> [ in 2022 ]</li>
-                        <li>Received an award of Most Innovative Student <br> [ in 2022 ]</li>
-                    </ul>
+            </section>
+            <form class="donate-form">
+                <img src="./img/icons8-close.svg" alt="close" id="close_don">
+                <div class="donate-head">
+                    <img src="./img/coffee.jpg" alt="coffee">
+                    <p>Buy me a coffee</p>
                 </div>
-            </div>
-            <div class="buttons">
-                <button class="resume">Resume</button>
-                <div class="download">
-                    <div class="dwn-head">
-                        <img src="./img/favicon.png" alt="logo" class="logo">
-                        <img src="./img/icons8-close.svg" alt="close" class="close-dwn">
-                    </div>
-                    <p class="download-ask">Do you want to download this file?</p>
-                    <div class="answer">
-                        <button><a href="./img/My Resume.pdf" class="vew" target="_blank">Just View</a></button>
-                        <button><a class="no">No</a></button>
-                    <button><a href="./img/My Resume.pdf" class="yes" download ="KingShow Resume.pdf">Yes</a></button>
-                    </div>
+                <div class="form-box">
+                    <label for="user_name">Name :</label>
+                    <input type="text" required id="user_name" placeholder="Your name">
                 </div>
-                <button class="portfolio proj">Portfolio</button>
-            </div>
-            <div class="my-age">
-                <table>
-                    <tr>
-                        <th class="col-3" colspan="6">My current age</th>
-                    </tr>
-                    <tr>
-                        <th>In years</th>
-                        <th>In days</th>
-                        <th>In hours</th>
-                        <th>In minutes</th>
-                        <th>In seconds</th>
-                        <th class="sm-scr">In Milliseconds</th>
-                    </tr>
-                    <tr>
-                        <td id="myYear"></td>
-                        <td id="myDay"></td>
-                        <td id="myHr"></td>
-                        <td id="myMin"></td>
-                        <td id="mySec"></td>
-                        <td id="myMil" class="sm-scr"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="faq-container">
-                <p class="faq-head"><span><img src="./img/icon-star.svg" alt="icon-star"></span> FAQs</p>
-                <div class="faq">
-                    <div class="up">
-                        <p class="faq-c">What programming languages and frameworks do you use?</p>
-                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
-                    </div>
-                    <p class="faq-hidden">Well i'm currently using HTML, CSS, Vanilla Javascript, and PHP.</p>
-                    <hr>
+                <div class="form-box">
+                    <label for="user_email">Email :</label>
+                    <input type="email" required id="user_email" placeholder="Your email">
                 </div>
-                <div class="faq">
-                    <div class="up">
-                        <p class="faq-c">Can you integrate third party API's?</p>
-                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
-                    </div>
-                    <p class="faq-hidden">Yes i can, i even have some projects that i have integrated API's with.</p>
-                    <hr>
+                <div class="form-box">
+                    <label for="user_num">Number :</label>
+                    <input type="number" required id="user_num" placeholder="Your number">
                 </div>
-                <div class="faq">
-                    <div class="up">
-                        <p class="faq-c">What is your pricing?</p>
-                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
-                    </div>
-                    <p class="faq-hidden">Hmm... well it depends on whether you need a large / small scale site. My
-                        pricing varies, you can <a href="mailto:davinateee@gmail.com">Email me!</a></p>
-                    <hr>
+                <div class="form-box">
+                    <label for="amount">Donate :</label>
+                    <input type="number" required step="1000" id="amount" placeholder="Amount in Naira">
                 </div>
-                <div class="faq">
-                    <div class="up">
-                        <p class="faq-c">Can you show me some examples of your work?</p>
-                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
-                    </div>
-                    <p class="faq-hidden">Okay, you could simply see that by going to my Portfolio Page</p>
-                    <hr>
-                </div>
-            </div>
+                <button type="submit" id ="don_btn" onclick="makePayment()"><img src="./img/coffeebtn.jpg" alt="coffee button"></button>
+            </form>
         </div>
-    </div>
-    <div id="projects" style="display: none;">
-        <div class="container">
-            <h1>My Projects</h1>
-            <hr>
-            <p>Selected showcases of Projects i'm excited to share</p>
-            <div class="my-projects">
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">All Country Info</div>
-                        <div class="project-time">Time it took me to create : 12hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-03 130338.png"
-                                alt="country project image"></a></div>
-                    <div class="project-description">This website will show info on any country you're looking for.
-                        <q>Creating this program was quite fun cause it thought me a lot of things like fetching data
-                            from JSON files, creating search filters...</q>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Mini Shop Project</div>
-                        <div class="project-time">Time it took me to create : 9hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-17 104639.png"
-                                alt="Shop project image"></a></div>
-                    <div class="project-description">This website is basically a shopping site. <q>Creating this program
-                            helped me learn some logic behind adding items to cart, making the image carousel and many
-                            more...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Balance Bar chart</div>
-                        <div class="project-time">Time it took me to create : 3hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-15 193946.png"
-                                alt="bar chart project image"></a></div>
-                    <div class="project-description">This website will show info on the profit made on a particular day
-                        when a bar is clicked. <q>Creating this program taught me how to look through every method to
-                            know how to do each thing different...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Flyo Practice</div>
-                        <div class="project-time">Time it took me to create : 3hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-07-19 214013.png"
-                                alt="Flyo Practice project image"></a></div>
-                    <div class="project-description">This is full landing practice page. <q>Creating this program showed
-                            me the many ways i could change the positions of different elements...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Grid Area</div>
-                        <div class="project-time">Time it took me to create : 2hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-07-11 192736.png"
-                                alt="grid Practice project image"></a></div>
-                    <div class="project-description">This website was created for practice! <q>Creating this program
-                            taught me how to control different grid objects...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Mortgage Calculator</div>
-                        <div class="project-time">Time it took me to create : 6hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/rtgage2.png"
-                                alt="grid Practice project image"></a></div>
-                    <div class="project-description">This website calculates the mortgage for a user. <q>Creating this
-                            program almost gave me a little issue but when i understood the math right it wasn't that
-                            hard...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Social Tariff Pricing</div>
-                        <div class="project-time">Time it took me to create : 6hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112628.png"
-                                alt="country project image"></a></div>
-                    <div class="project-description">This website was creted for practice purpose.
-                        <q>Creating this program was quite challenging as it taught me how to change the appearance of a
-                            range input type and assign values to each slider...</q>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Multi Step Form</div>
-                        <div class="project-time">Time it took me to create : 10hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112535.png"
-                                alt="Shop project image"></a></div>
-                    <div class="project-description">This website is basically a Multi step form pricing page.
-                        <q>Creating this program
-                            helped me learn many new things, including state management...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Interactive Card</div>
-                        <div class="project-time">Time it took me to create : 3hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112435.png"
-                                alt="bar chart project image"></a></div>
-                    <div class="project-description">This website was a practice project for me to understand forms.
-                        <q>Creating thisprogram tau ght me how to position different images on an image while enabling
-                            the site to be responsive...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Multi Toggle Calculator</div>
-                        <div class="project-time">Time it took me to create : 10hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112255.png"
-                                alt="Flyo Practice project image"></a></div>
-                    <div class="project-description">This is a calculator that can switch into 3 different themes.
-                        <q>Creating this program made me to understand that i could easily create any type of toggle
-                            button no matter the number...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">Quote Generator [ API Used ]</div>
-                        <div class="project-time">Time it took me to create : 2hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112139.png"
-                                alt="grid Practice project image"></a></div>
-                    <div class="project-description">This website will display a different quote on each click on the
-                        dice button. <q>Creating this program
-                            taught me how to use API's which was quite a nice experience...</q></div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <div class="project-title">IP Address Finder [ API Used ]</div>
-                        <div class="project-time">Time it took me to create : 5hrs</div>
-                    </div>
-                    <div class="project-image"><a href="#"><img src="./img/Screenshot 2024-08-23 112008.png"
-                                alt="grid Practice project image"></a></div>
-                    <div class="project-description">This website will show the location of any valid IP Address you wish to search <q>Creating this program was a little complex when it came to integrating the API but after reading the Instructions, all was good...</q></div>
-                </div>
-            </div>
-        </div>
-        <div class="btnup"><img src="./img/arrow-circle-up-svgrepo-com.svg" alt="arrow" class="goup">
-        </div>
-    </div>
-    <div id="testimonials" style="display: none;">
+    <div id="testimonials" hidden>
         <h1>My Testimonials</h1>
         <main class="testimonial-container">
             <section class="testimonial-box">
@@ -424,29 +209,10 @@
             </section>
         </main>
     </div>
-    <div id="contact" style="display: none;">
-        <div class="contact-container">
-            <p>Feel free to contact me anything! </p>
-            <div class="my-contacts">
-                <img src="./img/photo_2024-08-18_16-34-37.jpg" alt="me">
-                <div class="name-box">
-                    <p class="name">Kingdavid Christian</p>
-                    <p class="pronouns">(He / Him)</p>
-                </div>
-                <p class="position"><code>Web Developer</code></p>
-                <button class="email" onclick="location.href ='mailto:davinateee@gmail.com'">Email me</button>
-                <div class="socials">
-                    <a href="https://www.instagram.com/kingshowplays/"><img src="./img/icons8-instagram.svg" alt="icons8-instagram"></a>
-                    <a href="https://m.facebook.com/kayceee.christian//"><img src="./img/icons8-facebook.svg" alt="icons8-facebook"></a>
-                    <a href="https://github.com/ChristianKaycee/"><img src="./img/icons8-github.svg" alt="icons8-github"></a>
-                    <a href="https://wa.me/message/75AQBKS6MMUHH1/"><video src="./img/icons8-linkedin-circled.gif.mp4" alt="icons8-linkedin-circled"></a>
-                </div>
-            </div>
-        </div>
-    </div>
     <footer>
         Copyright &copy; <span class="date"></span>, @KingShowPlays [ Kingdavid Christian ]
     </footer>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
     <script defer src="./script.js"></script>
 </body>
 
