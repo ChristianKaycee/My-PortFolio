@@ -88,19 +88,35 @@ if (pageName === 'index.html') {
     donateBtn.addEventListener("click",(e)=>{
         e.preventDefault();
     })
+    function generateTransactionID() {
+    const prefix = "King-coff";
+    const length = 21;
+    const randomPartLength = length - prefix.length;
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let randomPart = '';
+
+    for (let i = 0; i < randomPartLength; i++) {
+        randomPart += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    return prefix + randomPart;
+}
+
+
+console.log(transactionID);
     function makePayment() {
     let user_num = number.value;
     let user_name = document.getElementById("user_name").value; // Added to ensure `user_name` is defined
     let user_email = email.value;
     let amt = amount.value;
-
+    const transactionID = generateTransactionID();
     if (!user_email || !user_num || !user_name || !amt) {
         alert("Please fill in all required fields.");
         return;
     }
         FlutterwaveCheckout({
           public_key: "FLWPUBK_TEST-2a3aac1cee87f8bdb0b0f8d8997b0def-X",
-          tx_ref: "KINGSHOW-DI0NzMx53",
+          tx_ref: transactionID,
           amount: amt,
           currency: "NGN",
           payment_options: "banktransfer,card, ussd",
@@ -114,7 +130,7 @@ if (pageName === 'index.html') {
             name: user_name,
           },
           customizations: {
-            title: "KingShow",
+            title: "KingShow Coffee",
             description: "Test Payment",
             logo: "https://checkout.flutterwave.com/assets/img/rave-logo.png",
           },
