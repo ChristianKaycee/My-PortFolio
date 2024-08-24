@@ -412,13 +412,14 @@ img {
     visibility: hidden;
     opacity: 0;
     pointer-events:none;
+    transition:.3s;
 }
 .donate-form.show{
     visibility: visible;
     opacity: 1;
     pointer-events:auto;
-    transition:.3s;
     transform: translate(-50%,-50%);
+    transition:.3s;
 }
 #close_don{
     align-self: flex-end;
