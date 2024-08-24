@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Portfolio | About</title>
+</head>
+
+<body>
+    <header class="head">
+        <div class="container">
+            <div class="name">
+                <img src="./img/favicon.png" alt="king icon" class="icon">
+                <p class="name_txt"><span class="mark">ing</span> Show</p>
+            </div>
+            <div class="menu-container">
+                <input type="checkbox" class="toggle">
+                <div class="menu">
+                    <div></div>
+                </div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li class="currentNav"><a href="#">About</a></li>
+                    <li><a href="./projects.html">My Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <div onclick="location.href ='mailto:davinateee@gmail.com'" class="with-me-two sm">
+                    <p>Work With Me</p>
+                    <button class="btn orange hov"><img src="./img/arrow-circle-up-svgrepo-com.svg"
+                            alt="Message me"></button>
+                </div>
+            </nav>
+            <div class="with-me" onclick="location.href ='mailto:davinateee@gmail.com'">
+                <p>Work With Me</p>
+                <button class="btn orange hov"><img src="./img/arrow-circle-up-svgrepo-com.svg"
+                        alt="Message me"></button>
+            </div>
+        </div>
+    </header>
+    <div class="margin"></div>
+    <div id="about">
+        <div class="about-me">
+            <div class="about-head">
+                <h1>About Me</h1>
+                <code>All you wanna know</code>
+            </div>
+            <p>Ermm... My name is <q><i><b>Kingdavid Christian</b></i></q>. I'm a front-end website developer.</p>
+            <div class="bios">
+                <div class="infoBox">
+                    <p class="hobby">Hobbies [ In my free time ]</p>
+                    <ul class="about-bio">
+                        <li>Coding</li>
+                        <li>Watching anime</li>
+                        <li>Playing games [ with friends tho ] playing by yourself doesn't seem fun.</li>
+                    </ul>
+
+                </div>
+                <div class="infoBox">
+                    <p class="school">Education [ Schools Attended ]</p>
+                    <ul class="school-bio">
+                        <li>Redeemers International Secondary School, <br> [ 2016-2022 ]</li>
+                        <li>University of Port-Harcourt, <br> [ 2022 - Till date ]</li>
+                    </ul>
+                </div>
+                <div class="infoBox">
+                    <p class="award">Awards Received</p>
+                    <ul class="award-bio">
+                        <li>Received an award of best in Data Processing <br> [ in 2022 ]</li>
+                        <li>Received an award of Most Innovative Student <br> [ in 2022 ]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="resume">Resume</button>
+                <div class="download">
+                    <div class="dwn-head">
+                        <img src="./img/favicon.png" alt="logo" class="logo">
+                        <img src="./img/icons8-close.svg" alt="close" class="close-dwn">
+                    </div>
+                    <p class="download-ask">Do you want to download this file?</p>
+                    <div class="answer">
+                        <button><a href="./img/My Resume.pdf" class="vew" target="_blank">Just View</a></button>
+                        <button><a class="no">No</a></button>
+                        <button><a href="./img/My Resume.pdf" class="yes"
+                                download="KingShow Resume.pdf">Yes</a></button>
+                    </div>
+                </div>
+                <button class="portfolio" onclick="location.href='./projects.html'">Portfolio</button>
+            </div>
+            <div class="my-age">
+                <table>
+                    <tr>
+                        <th class="col-3" colspan="6">My current age</th>
+                    </tr>
+                    <tr>
+                        <th>In years</th>
+                        <th>In days</th>
+                        <th>In hours</th>
+                        <th>In minutes</th>
+                        <th>In seconds</th>
+                        <th class="sm-scr">In Milliseconds</th>
+                    </tr>
+                    <tr>
+                        <td id="myYear"></td>
+                        <td id="myDay"></td>
+                        <td id="myHr"></td>
+                        <td id="myMin"></td>
+                        <td id="mySec"></td>
+                        <td id="myMil" class="sm-scr"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="faq-container">
+                <p class="faq-head"><span><img src="./img/icon-star.svg" alt="icon-star"></span> FAQs</p>
+                <div class="faq">
+                    <div class="up">
+                        <p class="faq-c">What programming languages and frameworks do you use?</p>
+                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
+                    </div>
+                    <p class="faq-hidden">Well i'm currently using HTML, CSS, Vanilla Javascript, and PHP.</p>
+                    <hr>
+                </div>
+                <div class="faq">
+                    <div class="up">
+                        <p class="faq-c">Can you integrate third party API's?</p>
+                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
+                    </div>
+                    <p class="faq-hidden">Yes i can, i even have some projects that i have integrated API's with.</p>
+                    <hr>
+                </div>
+                <div class="faq">
+                    <div class="up">
+                        <p class="faq-c">What is your pricing?</p>
+                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
+                    </div>
+                    <p class="faq-hidden">Hmm... well it depends on whether you need a large / small scale site. My
+                        pricing varies, you can <a href="mailto:davinateee@gmail.com">Email me!</a></p>
+                    <hr>
+                </div>
+                <div class="faq">
+                    <div class="up">
+                        <p class="faq-c">Can you show me some examples of your work?</p>
+                        <span class="minus"><img src="./img/icon-plus.svg" alt="icon-plus"></span>
+                    </div>
+                    <p class="faq-hidden">Okay, you could simply see that by going to my Portfolio Page</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Copyright &copy; <span class="date"></span>, @KingShowPlays [ Kingdavid Christian ]
+    </footer>
+    <script defer src="./script.js"></script>
+</body>
+
+</html>
